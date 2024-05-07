@@ -1,0 +1,96 @@
+PS C:\Users\sarath\Desktop\DJANGO> git init
+Initialized empty Git repository in C:/Users/sarath/Desktop/DJANGO/.git/
+PS C:\Users\sarath\Desktop\DJANGO> git add .
+PS C:\Users\sarath\Desktop\DJANGO> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .vscode/settings.json
+        new file:   monthly_challanges/challanges/__init__.py
+        new file:   monthly_challanges/challanges/admin.py
+        new file:   monthly_challanges/challanges/apps.py
+        new file:   monthly_challanges/challanges/migrations/__init__.py
+        new file:   monthly_challanges/challanges/models.py
+        new file:   monthly_challanges/challanges/tests.py
+        new file:   monthly_challanges/challanges/views.py
+        new file:   monthly_challanges/manage.py
+        new file:   monthly_challanges/monthly_challanges/__init__.py
+        new file:   monthly_challanges/monthly_challanges/__pycache__/__init__.cpython-312.pyc
+        new file:   monthly_challanges/monthly_challanges/__pycache__/settings.cpython-312.pyc
+        new file:   monthly_challanges/monthly_challanges/asgi.py
+        new file:   monthly_challanges/monthly_challanges/settings.py
+        new file:   monthly_challanges/monthly_challanges/urls.py
+        new file:   monthly_challanges/monthly_challanges/wsgi.py
+        new file:   mypage/challanges/__init__.py
+        new file:   mypage/challanges/admin.py
+        new file:   mypage/challanges/apps.py
+        new file:   mypage/challanges/migrations/__init__.py
+        new file:   mypage/challanges/models.py
+        new file:   mypage/challanges/tests.py
+        new file:   mypage/challanges/views.py
+        new file:   mypage/db.sqlite3
+        new file:   mypage/manage.py
+        new file:   mypage/mypage/__init__.py
+        new file:   mypage/mypage/__pycache__/__init__.cpython-312.pyc
+        new file:   mypage/mypage/__pycache__/settings.cpython-312.pyc
+        new file:   mypage/mypage/__pycache__/urls.cpython-312.pyc
+        new file:   mypage/mypage/__pycache__/wsgi.cpython-312.pyc
+        new file:   mypage/mypage/asgi.py
+        new file:   mypage/mypage/settings.py
+        new file:   mypage/mypage/urls.py
+        new file:   mypage/mypage/wsgi.py
+
+PS C:\Users\sarath\Desktop\DJANGO> git commit -m "first commit"
+[master (root-commit) 4f12e42] first commit
+ 34 files changed, 434 insertions(+)
+ create mode 100644 .vscode/settings.json
+ create mode 100644 monthly_challanges/challanges/__init__.py
+ create mode 100644 monthly_challanges/challanges/admin.py
+ create mode 100644 monthly_challanges/challanges/apps.py
+ create mode 100644 monthly_challanges/challanges/migrations/__init__.py
+ create mode 100644 monthly_challanges/challanges/models.py
+ create mode 100644 monthly_challanges/challanges/tests.py
+ create mode 100644 monthly_challanges/challanges/views.py
+ create mode 100644 monthly_challanges/manage.py
+ create mode 100644 monthly_challanges/monthly_challanges/__init__.py
+ create mode 100644 monthly_challanges/monthly_challanges/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 monthly_challanges/monthly_challanges/__pycache__/settings.cpython-312.pyc
+ create mode 100644 monthly_challanges/monthly_challanges/asgi.py
+ create mode 100644 monthly_challanges/monthly_challanges/settings.py
+ create mode 100644 monthly_challanges/monthly_challanges/urls.py
+ create mode 100644 monthly_challanges/monthly_challanges/wsgi.py
+ create mode 100644 mypage/challanges/__init__.py
+ create mode 100644 mypage/challanges/admin.py
+ create mode 100644 mypage/challanges/apps.py
+ create mode 100644 mypage/challanges/migrations/__init__.py
+ create mode 100644 mypage/challanges/models.py
+ create mode 100644 mypage/challanges/tests.py
+ create mode 100644 mypage/challanges/views.py
+ create mode 100644 mypage/db.sqlite3
+ create mode 100644 mypage/manage.py
+ create mode 100644 mypage/mypage/__init__.py
+ create mode 100644 mypage/mypage/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 mypage/mypage/__pycache__/settings.cpython-312.pyc
+ create mode 100644 mypage/mypage/__pycache__/urls.cpython-312.pyc
+ create mode 100644 mypage/mypage/__pycache__/wsgi.cpython-312.pyc
+ create mode 100644 mypage/mypage/asgi.py
+ create mode 100644 mypage/mypage/settings.py
+ create mode 100644 mypage/mypage/urls.py
+ create mode 100644 mypage/mypage/wsgi.py
+PS C:\Users\sarath\Desktop\DJANGO> git branch -M main
+PS C:\Users\sarath\Desktop\DJANGO> git remote add origin https://github.com/sarathchandranm2001/DJANGO.git
+PS C:\Users\sarath\Desktop\DJANGO> git push -u origin main
+Enumerating objects: 33, done.
+Counting objects: 100% (33/33), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (30/30), done.
+Writing objects: 100% (33/33), 7.33 KiB | 1.47 MiB/s, done.
+Total 33 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), done.
+To https://github.com/sarathchandranm2001/DJANGO.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\sarath\Desktop\DJANGO> 
