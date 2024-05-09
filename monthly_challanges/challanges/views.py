@@ -3,10 +3,18 @@ from django.shortcuts import render
 from django.urls import reverse
 
 monthly_cha = {
-    "january": "January",
-    "february": "February",
-    "march": "March",
-    "april": "April"
+    "january": "Read books",
+    "february": "Learn a new skill",
+    "march": "Start a daily journal",
+    "april": "Practice mindfulness",
+    "may": "Start a fitness routine",
+    "june": "Explore outdoor activities",
+    "july": "Volunteer in your community",
+    "august": "Try a new hobby",
+    "september": "Set personal goals",
+    "october": "Learn a new recipe each week",
+    "november": "Practice gratitude daily",
+    "december": "Give back to those in need"
 }
 
 def index(request):
