@@ -1,7 +1,7 @@
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
-
+from django.template.loader import render_to_string
 monthly_cha = {
     "january": "Read books",
     "february": "Learn a new skill",
@@ -40,7 +40,7 @@ def monthly_ch_by_num(request, month):
 def monthly_ch(request, month):
     try:
         challenge_text = monthly_cha[month]
-        response_data = f"<h1>{challenge_text}</h1>"
-        return HttpResponse(response_data)
+       
+        return render(request,'challanges/challange.html')
     except KeyError:
         return HttpResponseNotFound("Not valid")
