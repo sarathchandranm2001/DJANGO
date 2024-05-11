@@ -41,6 +41,8 @@ def monthly_ch(request, month):
     try:
         challenge_text = monthly_cha[month]
        
-        return render(request,'challanges/challange.html')
+        return render(request,'challanges/challange.html',{"text":challenge_text ,
+                                                           "month_name":month.capitalize()
+                                                           })
     except KeyError:
         return HttpResponseNotFound("Not valid")
