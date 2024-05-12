@@ -6,11 +6,14 @@
     <title>monthly challanges</title>
 </head>
 <body>
+    {% block content %}
+    {% include "challanges/includes/header.html" %}
     <h1>{{month_name}} mOnths challanges</h1>
     {% if  text is not None %}
     <h2>{{ text }}</h2>
      {% else %} 
     <p>there is no challange for this month</p>
     {%endif%}
+    {%endblock%}
 </body>
 </html>
