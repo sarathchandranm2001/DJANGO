@@ -1,4 +1,4 @@
-from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
+from django.http import Http404,HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 from django.template.loader import render_to_string
@@ -45,5 +45,5 @@ def monthly_ch(request, month):
                                                            "month_name":month.capitalize()
                                                            })
     except KeyError:
-       response_data= render_to_string("404.html")
-       return HttpResponseNotFound(response_data)
+        raise Http404()
+

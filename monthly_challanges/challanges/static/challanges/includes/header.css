@@ -1,0 +1,22 @@
+/* includes/header.css */
+
+/* Style the header element */
+header {
+    background-color: #f8f9fa; /* Adjust the background color as needed */
+    padding: 1rem;
+  }
+  
+  /* Style the navigation links */
+  nav a {
+    text-decoration: none;
+    color: #333; /* Adjust the color as needed */
+    padding: 0.5rem 1rem;
+  }
+  
+  nav a:hover {
+    color: #555; /* Adjust the color as needed */
+    background-color: #e9ecef; /* Adjust the background color on hover as needed */
+  }
+  
+  /* Optionally, add more styles as needed */
+  
