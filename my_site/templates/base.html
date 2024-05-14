@@ -3,25 +3,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'app.css' %}">
-    {% block css_files %}{% endblock %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static "app.css" %}">
+  {% block css_files %}{% endblock %}
 </head>
 <body>
-    <div id="main-navigation">
-        <h1><a href="#">My Website</a></h1>
-        <nav>
-            <ul>
-                {% block navmenu %}
-                <li><a href="#">Home</a></li>
-                {% endblock %}
-            </ul>
-        </nav>
-    </div>
-    <div class="container">
-        {% block content %}{% endblock %}
-    </div>
+  <header id="main-navigation">
+    <h1><a href="">Sarath's Blog</a></h1>
+    <nav>
+      <a href="">All Posts</a>
+    </nav>
+  </header>
+
+  {% block content %}
+  {% endblock %}
 </body>
 </html>
