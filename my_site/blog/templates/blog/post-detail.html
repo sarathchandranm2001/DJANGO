@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+This post title
+{% endblock title %}
+{% block css_files %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static "blog/post-detail.css" %}" />
+
+{% endblock css_files %}
+
+{% block content %}
+<section id="summary">
+    <h2>post article</h2>
+    <article>
+    <img src="" alt="" srcset="">
+    <address>Sarath Chandran M</address>
+    <div>
+        Last updated on
+        <time>january 10th</time>
+        
+    </div>
+    </article>
+</section>
+<main>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores explicabo soluta suscipit obcaecati vitae eveniet amet beatae tenetur tempore aut nam, placeat expedita optio est illum eum cumque eligendi perspiciatis!</p>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perferendis beatae iusto blanditiis. Delectus quibusdam laborum aliquid asperiores modi praesentium! Eum porro distinctio, asperiores maiores ratione laborum alias eos quidem?
+
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dignissimos possimus necessitatibus odit veritatis laboriosam delectus saepe, quibusdam voluptatibus iure rerum pariatur qui consequatur eius nobis fugiat quidem architecto quo.
+    </p>
+</main>
+
+{% endblock  %}
