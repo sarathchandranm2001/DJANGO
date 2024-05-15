@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}
-This post title
+{{post.title}}
 {% endblock title %}
 
 {% block css_files %}
@@ -11,26 +11,19 @@ This post title
 
 {% block content %}
 <section id="summary">
-    <h2>post article</h2>
+    <h2>{{post.title}}</h2>
     <article>
-    <img src="" alt="" srcset="">
-    <address>Sarath Chandran M</address>
+    <img src={% static "blog/images/"|add:post.image  %} alt="{{post.title}}" srcset="">
+    <address>{{post.author}}</address>
     <div>
         Last updated on
-        <time>january 10th</time>
+        <time>{{post.date|date:"d M Y"}}</time>
         
     </div>
     </article>
 </section>
 <main>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores explicabo soluta suscipit obcaecati vitae eveniet amet beatae tenetur tempore aut nam, placeat expedita optio est illum eum cumque eligendi perspiciatis!</p>
-    <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perferendis beatae iusto blanditiis. Delectus quibusdam laborum aliquid asperiores modi praesentium! Eum porro distinctio, asperiores maiores ratione laborum alias eos quidem?
-
-    </p>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dignissimos possimus necessitatibus odit veritatis laboriosam delectus saepe, quibusdam voluptatibus iure rerum pariatur qui consequatur eius nobis fugiat quidem architecto quo.
-    </p>
+    {{post.content|linebreaks}}
 </main>
 
 {% endblock  %}

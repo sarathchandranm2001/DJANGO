@@ -77,12 +77,17 @@ def starting_page(request):
     return render(request, "blog/index.html", {"posts": latest_posts})
 
 def posts(request):
-    return render(request, "blog/all-posts.html", {"posts": all_posts})
+    return render(request, "blog/all-posts.html",{
+        "all-posts":all_posts
+    })
+    
+from django.shortcuts import render, get_object_or_404
 
 def post_detail(request, slug):
-    post = next((post for post in all_posts if post['slug'] == slug), None)
-    if post:
-        return render(request, "blog/post-detail.html", {"post": post})
-    else:
-        # Handle the case where the post is not found
-        return HttpResponse(f"Post with slug '{slug}' not found.")
+    identified_post = next((post for post in all_posts if post['slug'] == slug), None)
+    if identified_post is None:
+        return render(request, "404.html", status=404)  # Or use the appropriate 404 response
+    return render(request, "blog/post-detail.html", {
+        "post": identified_post
+    })
+
