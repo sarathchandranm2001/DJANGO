@@ -8,7 +8,7 @@ All book_outlet/base.html
 <ul>
     {% for book  in books %}
     <li></li>
-    <li><a href="{% url "book-details" book.id %}">{{book.title}} (Rating :{{book.rating}})</a></li>
+    <li><a href="{{book.get_absolute_url}}">{{book.title}} (Rating :{{book.rating}})</a></li>
 
     {% endfor %}
    
