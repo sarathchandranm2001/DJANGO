@@ -18,4 +18,18 @@ class ReviewForm(forms.ModelForm):
         fields='__all__'
         #exclude=['rating']--excludes rating
 
+
+        #adding new labels or configuring modle forms
+        labels={'name':'Your Name',
+                'review_text':'Your Feed Back :',
+                'rating':'Your Rating'}
+        error_messages={
+            'name':{'required':'Your name must not be empty',
+                    'max_length':'please enter a shorter name',
+            }
+        }
+ 
+
+
+
     
