@@ -72,6 +72,15 @@ class ReviewsListView(ListView):
 class SingleReviewView(DetailView):
     template_name = 'reviews/single_review.html'
     model = Review
+    def get_context_data(self, **kwargs):
+        context= super().get_context_data(**kwargs)
+        loaded_review=self.object 
+        request=self.request
+        favourite_id=request.session.get["favourite_review"]
+        context["is_favourite"]=favourite_id==str(loaded_review.id)
+        return context
+
+
     #def get_context_data(self, **kwargs):
      #   context = super().get_context_data(**kwargs)
       #  review_id=kwargs["id"]
@@ -79,4 +88,10 @@ class SingleReviewView(DetailView):
         #reviews = Review.objects.all()
         #context["review"] = selected_review
         #return context
-    
+
+class AddFavoriteView(View):
+    def post(self, request):
+        review_id = request.POST.get('review_id')
+        request.session['favourite_review'] = review_id
+        return HttpResponseRedirect("/reviews/"+review_id)
+      
