@@ -1,30 +1,43 @@
 {% extends "base.html" %} 
-{% load static %} 
+{% load static %}
 
 {% block title %} 
-{{ post.title }}
+My Blog 
 {% endblock %} 
 
-{% block css_files %} 
-<link rel="stylesheet" href="{% static "blog/post-detail.css" %}" /> 
-{% endblock %} 
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "blog/post.css" %}" />
+  <link rel="stylesheet" href="{% static "blog/index.css" %}" />
+{% endblock %}
 
 {% block content %}
-<section id="summary">
-  <h2>{{ post.title }}</h2>
-  <div>
-    {% for tag in post_tags %}
-      <span class="tag">{{ tag.caption }}</span>
-    {% endfor %}
-  </div>
-  <article>
-    <img src="{{ post.image.url }}" alt="{{ post.title }}" />
-    <address>By <a href="mailto:{{ post.author.email_address }}">{{ post.author }}</a></address>
-    <div>Last updated on <time>{{ post.date|date:"d M Y" }}</time></div>
-  </article>
+<section id="welcome">
+  <header>
+    <img src="{% static "blog/images/sarath.png" %}" alt="Sarath - The Author Of This Blog" />
+    <h2>SARATH CHANDRAN'S BLOG</h2>
+  </header>
+  <p>Hi, Im Sarath Chandran M and I am an Ongoing Mca Graduate!</p>
 </section>
 
-<main>
-  {{ post.content|linebreaks }}
-</main>
+<section id="latest-posts">
+  <h2>My Latest Thoughts</h2>
+
+  <ul>
+    {% for post in posts %}
+      {% include "blog/includes/post.html" %}
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="about">
+  <h2>What I Do</h2>
+  <p>
+    I love programming, I love to help others and I enjoy exploring new
+    technologies in general!
+  </p>
+  <p>
+    My goal is to keep on growing as a developer - and if I could help you do
+    the same, I'd be very happy!
+  </p>
+</section>
 {% endblock %}
